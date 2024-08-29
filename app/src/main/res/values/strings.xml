@@ -1,0 +1,144 @@
+<resources>
+    <string name="app_name">Kri - Clicker</string>
+
+    <string name="buy">Купить</string>
+    <string name="close">Закрыть</string>
+    <string name="go">Перейти</string>
+    <string name="price">Цена: </string>
+
+    <string name="perSecond">В секунду</string>
+
+    <string name="insufficientlyFunds">Недостаточно средств!</string>
+    <string name="alreadyPurhaced">Уже приобретено!</string>
+    <string name="purchased">Приобретено!</string>
+
+
+    <string name="changeBackground">Сменить внешний вид фона</string>
+    <string name="changeKriKoin">Сменить внешний вид монет</string>
+    <string name="changeProduction">Сменить внешний вид иконок</string>
+    <string name="isStretchBackground">Фон: Растягивать</string>
+    <string name="isFillBackground">Фон: Заполнять</string>
+    <string name="changeBackgroundFunc">Пользовательский фон: Устанавливать</string>
+    <string name="setBackgroundFunc">Пользовательский фон: Удалять</string>
+
+    <string name="loadBackground">Загрузить внешний вид фона</string>
+
+    <string name="chooseBackground">Выберите фон:</string>
+    <string name="chooseKriKoin">Выберите КриКоин:</string>
+    <string name="chooseIcon">Выберите иконку:</string>
+
+    <string name="loadChooseBackground">Загрузите/выберите внешний вид фона</string>
+    <string name="clickLoadBackground">Нажмите, чтобы загрузить фон</string>
+
+    <string name="turnNormalNotation">Включить нормальную нотацию чисел</string>
+    <string name="turnScienceNotation">Включить научную нотацию чисел</string>
+
+    <string name="purchaseAll">Купить всё</string>
+
+    <string name="clickAmount">Количество кликов: </string>
+    <string name="clickPower">Сила клика: </string>
+    <string name="timeSpent">Проведено времени: </string>
+    <string name="CPS">Кликов в секунду: </string>
+
+    <string name="settings">Настройки</string>
+    <string name="upgrades">Улучшения</string>
+    <string name="home">Дом</string>
+    <string name="achievements">Достижения</string>
+    <string name="production">Производство</string>
+
+    <string name="NaN">Разрабатывается</string>
+
+<!--    <string name="id1_1">"Начало вашего пути"</string> -->
+
+    <string name="multiply2">Увеличивает мощность клика в 2 раза</string>
+    <string name="multiply5">Увеличивает мощность клика в 5 раз</string>
+
+    <string name="multiplyChisel2">Увеличивает мощность плотников в 2 раза</string>
+    <string name="multiplyChisel5">Увеличивает мощность плотников в 5 раз</string>
+
+    <string name="multiplyStoneCutter2">Увеличивает мощность скульпторов в 2 раза</string>
+    <string name="multiplyStoneCutter5">Увеличивает мощность скульпторов в 5 раз</string>
+
+    <string name="multiplyBronzeForge2">Увеличивает мощность плавильни в 2 раза</string>
+    <string name="multiplyBronzeForge5">Увеличивает мощность плавильни в 5 раз</string>
+
+    <string name="multiplyIronForge2">Увеличивает мощность сыродутной печи в 2 раза</string>
+    <string name="multiplyIronForge5">Увеличивает мощность сыродутной печи в 5 раз</string>
+
+    <string name="multiplyCrucible2">Увеличивает мощность тигеля в 2 раза</string>
+    <string name="multiplyCrucible5">Увеличивает мощность тигеля в 5 раз</string>
+
+    <string name="multiplyVAF2">Увеличивает мощность вакуумно-дуговой печи в 2 раза</string>
+    <string name="multiplyVAF5">Увеличивает мощность вакуумно-дуговой печи в 5 раз</string>
+
+    <string name="multiplyNPP2">Увеличивает мощность АЭС в 2 раза</string>
+    <string name="multiplyNPP5">Увеличивает мощность АЭС в 5 раз</string>
+
+    <string name="multiplyDiamondGenerator2">Увеличивает мощность HPHT устройств в 2 раза</string>
+    <string name="multiplyDiamondGenerator5">Увеличивает мощность HPHT устройств в 5 раз</string>
+
+    <string name="multiplyMagicAltar2">Увеличивает мощность магического алтаря в 2 раза</string>
+    <string name="multiplyMagicAltar5">Увеличивает мощность магического алтаря в 5 раз</string>
+
+    <string name="achievementClicks1">Увеличивает мощность клика в 0,25% за каждого плотника</string>
+    <string name="achievementClicks2">Увеличивает мощность клика в 0,275% за каждого скульптора</string>
+    <string name="achievementClicks3">Увеличивает мощность клика в 0,3% за каждую плавильню</string>
+    <string name="achievementClicks4">Увеличивает мощность клика в 0,315% за каждую сыродутную печь</string>
+    <string name="achievementClicks5">Увеличивает мощность клика в 0,334% за каждый тигель</string>
+    <string name="achievementClicks6">Увеличивает мощность клика в 0,35% за каждую вакуумно-дуговую печь и АЭС</string>
+    <string name="achievementClicks7">Увеличивает мощность клика в 0,4% за каждое HPHT устройство и магический алтарь</string>
+
+    <string name="achievementClicksRequire1">Сделайте 1500 нажатий</string>
+    <string name="achievementClicksRequire2">Сделайте 2500 нажатий</string>
+    <string name="achievementClicksRequire3">Сделайте 5000 нажатий</string>
+    <string name="achievementClicksRequire4">Сделайте 15000 нажатий</string>
+    <string name="achievementClicksRequire5">Сделайте 25000 нажатий</string>
+    <string name="achievementClicksRequire6">Сделайте 40000 нажатий</string>
+    <string name="achievementClicksRequire7">Сделайте 75000 нажатий</string>
+
+    <string name="achievementTime1">Увеличивает силу нажатий в 10%</string>
+    <string name="achievementTime10">Увеличивает мощность плотника в 2,5% за каждого скульптора</string>
+
+    <string name="achievementTime2">Увеличивает силу нажатий в 12,5%</string>
+    <string name="achievementTime20">Увеличивает мощность скульптора в 1,5% за каждую плавильню</string>
+
+    <string name="achievementTime3">Увеличивает силу нажатий в 15%</string>
+    <string name="achievementTime30">Увеличивает мощность плавильни в 1.25% за каждую сыродутную печь</string>
+
+    <string name="achievementTime4">Увеличивает силу нажатий в 20%</string>
+    <string name="achievementTime40">Увеличивает мощность сыродутной печи и тигеля в 1,15% за каждую вакуумно-дуговую печь</string>
+
+    <string name="achievementTime5">Увеличивает силу нажатий в 25%</string>
+    <string name="achievementTime50">Увеличивает мощность вакуумно-дуговой печи и АЭС в 1,1% за каждое HPHT устройство</string>
+
+    <string name="achievementTime6">Увеличивает силу нажатий в 30%</string>
+    <string name="achievementTime60">Увеличивает мощность HPHT устройства и магического алтаря в 1% за каждого плотника</string>
+
+    <string name="achievementTimeRequire1">Проведите в игре 10 минут</string>
+    <string name="achievementTimeRequire2">Проведите в игре 1 час</string>
+    <string name="achievementTimeRequire3">Проведите в игре 3 часа</string>
+    <string name="achievementTimeRequire4">Проведите в игре 6 часов</string>
+    <string name="achievementTimeRequire5">Проведите в игре 24 часа</string>
+    <string name="achievementTimeRequire6">Проведите в игре 72 часа</string>
+
+    <string name="reborn">Перерождение</string>
+    <string name="reborn1">Увеличивает силу клика на 0.1% в зависимости от CPS</string>
+    <string name="reborn2">Увеличивает прибыль с AFK с 25% до 50%</string>
+    <string name="reborn3">Увеличивает продолжительность AFK с 2 до 4 часов</string>
+    <string name="reborn4">Увеличивает прибыль с AFK до 75%</string>
+    <string name="reborn5">Увеличивает продолжительность AFK до 6 часов</string>
+    <string name="reborn6">Позволяет сохранять улучшения, которые не исчезнут при перерождении</string>
+    <string name="reborn7">Позволяет сохранять улучшения, которые не исчезнут при перерождении</string>
+    <string name="reborn8">Позволяет сохранять улучшения, которые не исчезнут при перерождении</string>
+    <string name="reborn9">Позволяет сохранять улучшения, которые не исчезнут при перерождении</string>
+
+    <string name="reborndescription1">Вы уверены, что хотите сделать перерождение?</string>
+    <string name="reborndescription2">Вы потеряете весь прогресс</string>
+    <string name="reborndescription3">Взамен вы получите:  </string>
+    <string name="rebornstonedescription">Выберите улучшение:</string>
+
+    <string name="afktime">Вас не было:  </string>
+    <string name="afkgain">Вы получили:  </string>
+    <string name="afkclaim">Принять</string>
+    <string name="timetraveller">Навык путешествия во времени!</string>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.myKriClicker.kri_clicker.ui.Settings.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/activity_settings" />
+
+    <fragment
+        android:id="@+id/navigation_upgrades"
+        android:name="com.myKriClicker.kri_clicker.ui.Upgrades.UpgradesFragment"
+        android:label="Upgrades"
+        tools:layout="@layout/activity_upgrades" />
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.myKriClicker.kri_clicker.ui.Home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/activity_home" />
+
+    <fragment
+        android:id="@+id/navigation_production"
+        android:name="com.myKriClicker.kri_clicker.ui.Production.ProductionFragment"
+        android:label="Production"
+        tools:layout="@layout/activity_production" />
+
+    <fragment
+        android:id="@+id/navigation_achievements"
+        android:name="com.myKriClicker.kri_clicker.ui.Achievements.AchievementsFragment"
+        android:label="Achievements"
+        tools:layout="@layout/activity_achievements" />
+</navigation>

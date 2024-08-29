@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="@drawable/popup_background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutAFK"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/afkDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NaN"
+            android:textColor="@color/gainsboro"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/amountAfkPopup"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/amountAfkPopup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NaN"
+            android:textColor="@color/gainsboro"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/afkDescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/afkDescription"
+            app:layout_constraintTop_toTopOf="@+id/afkDescription"
+            tools:ignore="TextSizeCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutAFK2"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/purchasePopup"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutAFK">
+
+        <TextView
+            android:id="@+id/amountAfkCash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NaN"
+            android:textColor="@color/gainsboro"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/amountPopup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NaN"
+            android:textColor="@color/gainsboro"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/amountAfkCash"
+            app:layout_constraintStart_toEndOf="@+id/amountAfkCash"
+            app:layout_constraintTop_toTopOf="@+id/amountAfkCash"
+            tools:ignore="TextSizeCheck" />
+
+        <ImageView
+            android:id="@+id/imagePopup"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/amountPopup"
+            app:layout_constraintStart_toEndOf="@+id/amountPopup"
+            app:layout_constraintTop_toTopOf="@+id/amountPopup"
+            app:srcCompat="@drawable/default_krikoin" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/storyPopup"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="NaN"-->
+    <!--        android:textColor="@color/gainsboro"-->
+    <!--        android:textSize="10dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/upgradePopup"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/descriptionPopup"-->
+    <!--        tools:ignore="TextSizeCheck" />-->
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/purchasePopup"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/popupbutton"
+        android:text="@string/afkclaim"
+        android:textColor="@color/green"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck,TouchTargetSizeCheck" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

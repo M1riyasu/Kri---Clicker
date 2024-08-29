@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/productionActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp"
+    android:background="@color/transparent"
+    tools:context=".ui.Production.ProductionFragment">
+
+    <TextView
+        android:id="@+id/CurrentKrikoinProduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:elevation="25dp"
+        android:text="..."
+        android:textSize="20dp"
+        android:textColor="@color/gainsboro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ProductionKrikoin"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:elevation="25dp"
+        android:src="@drawable/default_krikoin"
+        app:layout_constraintBottom_toBottomOf="@+id/CurrentKrikoinProduction"
+        app:layout_constraintStart_toEndOf="@+id/CurrentKrikoinProduction"
+        app:layout_constraintTop_toTopOf="@+id/CurrentKrikoinProduction" />
+
+    <TextView
+        android:id="@+id/KrikoinPerSecondProduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:elevation="25dp"
+        android:text="..."
+        android:textColor="@color/gainsboro"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="@+id/CurrentKrikoinProduction"
+        app:layout_constraintStart_toStartOf="@+id/CurrentKrikoinProduction"
+        app:layout_constraintTop_toBottomOf="@+id/CurrentKrikoinProduction"
+        tools:ignore="TextSizeCheck" />
+
+    <ImageView
+        android:id="@+id/ProductionKrikoinPerSecond"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:elevation="25dp"
+        android:src="@drawable/default_krikoin"
+        app:layout_constraintBottom_toBottomOf="@+id/KrikoinPerSecondProduction"
+        app:layout_constraintStart_toEndOf="@+id/KrikoinPerSecondProduction"
+        app:layout_constraintTop_toTopOf="@+id/KrikoinPerSecondProduction" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/multiply1x"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginEnd="197dp"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/multipliershape"
+        android:elevation="25dp"
+        android:onClick="onButtonClick"
+        android:text="1x"
+        android:textColor="#C8C8C8"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/multiply5x"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:elevation="25dp"
+        android:background="@drawable/multipliershape"
+        android:text="5x"
+        android:textColor="#C8C8C8"
+        android:textSize="30dp"
+        android:onClick="onButtonClick"
+        app:layout_constraintBottom_toBottomOf="@+id/multiply1x"
+        app:layout_constraintStart_toEndOf="@+id/multiply1x"
+        app:layout_constraintTop_toTopOf="@+id/multiply1x" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/multiply100x"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:elevation="25dp"
+        android:background="@drawable/multipliershape"
+        android:text="100x"
+        android:textColor="#C8C8C8"
+        android:textSize="17dp"
+        android:onClick="onButtonClick"
+        app:layout_constraintBottom_toBottomOf="@+id/multiply5x"
+        app:layout_constraintStart_toEndOf="@+id/multiply5x"
+        app:layout_constraintTop_toTopOf="@+id/multiply5x" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/multiplymax"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:elevation="25dp"
+        android:background="@drawable/multipliershape"
+        android:text="MAX"
+        android:textColor="#C8C8C8"
+        android:textSize="22dp"
+        android:onClick="onButtonClick"
+        app:layout_constraintBottom_toBottomOf="@+id/multiply100x"
+        app:layout_constraintStart_toEndOf="@+id/multiply100x"
+        app:layout_constraintTop_toTopOf="@+id/multiply100x" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/Krikoin1"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="6dp"
+                android:elevation="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/Upgrade1"
+                app:layout_constraintStart_toStartOf="@+id/Upgrade1"
+                app:layout_constraintTop_toTopOf="@+id/Upgrade1"
+                app:srcCompat="@drawable/default_krikoin" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Upgrade1"
+                android:layout_width="120dp"
+                android:layout_height="56dp"
+                android:layout_below="@id/UpgradeCost1"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/buttonshape"
+                android:typeface="normal"
+                app:layout_constraintBottom_toBottomOf="@+id/outline1"
+                app:layout_constraintEnd_toEndOf="@+id/outline1"
+                app:layout_constraintTop_toTopOf="@+id/outline1"
+                tools:ignore="TextSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/UpgradeCost1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:elevation="20dp"
+                android:text="..."
+                android:textColor="#FFFF32"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="@+id/Upgrade1"
+                app:layout_constraintStart_toEndOf="@+id/Krikoin1"
+                app:layout_constraintTop_toTopOf="@+id/Upgrade1"
+                tools:ignore="TextSizeCheck" />
+
+            <ImageView
+                android:id="@+id/outline1"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="128dp"
+                android:background="@drawable/outline1"
+                app:layout_constraintEnd_toStartOf="@+id/space1"
+                app:layout_constraintStart_toEndOf="@+id/space2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/icon1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/upgrade_one"
+                app:layout_constraintBottom_toBottomOf="@+id/outline1"
+                app:layout_constraintStart_toStartOf="@+id/outline1"
+                app:layout_constraintTop_toTopOf="@+id/outline1" />
+
+            <TextView
+                android:id="@+id/amountUpgrades1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="...x"
+                android:textColor="@color/gainsboro"
+                android:textSize="17.5dp"
+                app:layout_constraintEnd_toStartOf="@+id/Upgrade1"
+                app:layout_constraintStart_toEndOf="@+id/icon1"
+                app:layout_constraintTop_toTopOf="@+id/outline1"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/description1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="+... В секунду"
+                android:textColor="@color/gainsboro"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toBottomOf="@+id/outline1"
+                app:layout_constraintEnd_toStartOf="@+id/Upgrade1"
+                app:layout_constraintStart_toEndOf="@+id/icon1"
+                tools:ignore="TextSizeCheck" />
+
+            <ImageView
+                android:id="@+id/Krikoin2"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="6dp"
+                android:elevation="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/Upgrade2"
+                app:layout_constraintStart_toStartOf="@+id/Upgrade2"
+                app:layout_constraintTop_toTopOf="@+id/Upgrade2"
+                app:srcCompat="@drawable/default_krikoin" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Upgrade2"
+                android:layout_width="120dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/buttonshape"
+                android:focusable="false"
+                android:typeface="normal"
+                app:layout_constraintBottom_toBottomOf="@+id/outline2"
+                app:layout_constraintEnd_toEndOf="@+id/outline2"
+                app:layout_constraintTop_toTopOf="@+id/outline2"
+                tools:ignore="TextSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/UpgradeCost2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:elevation="20dp"
+                android:text="..."
+                android:textColor="#FFFF32"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="@+id/Upgrade2"
+                app:layout_constraintStart_toEndOf="@+id/Krikoin2"
+                app:layout_constraintTop_toTopOf="@+id/Upgrade2"
+                tools:ignore="TextSizeCheck" />
+
+
+            <ImageView
+                android:id="@+id/outline2"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/outline2"
+                app:layout_constraintEnd_toStartOf="@+id/space1"
+                app:layout_constraintStart_toEndOf="@+id/space2"
+                app:layout_constraintTop_toBottomOf="@+id/outline1" />
+
+            <ImageView
+                android:id="@+id/icon2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/upgrade_two"
+                app:layout_constraintBottom_toBottomOf="@+id/outline2"
+                app:layout_constraintStart_toStartOf="@+id/outline2"
+                app:layout_constraintTop_toTopOf="@+id/outline2" />
+
+            <TextView
+                android:id="@+id/amountUpgrades2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="...x"
+                android:textColor="@color/gainsboro"
+                android:textSize="17.5dp"
+                app:layout_constraintEnd_toStartOf="@+id/Upgrade2"
+                app:layout_constraintStart_toEndOf="@+id/icon2"
+                app:layout_constraintTop_toTopOf="@+id/outline2"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/description2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="+... В секунду"
+                android:textColor="@color/gainsboro"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toBottomOf="@+id/outline2"
+                app:layout_constraintEnd_toStartOf="@+id/Upgrade2"
+                app:layout_constraintStart_toEndOf="@+id/icon2"
+                tools:ignore="TextSizeCheck" />
+
+            <ImageView
+                android:id="@+id/Krikoin3"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="6dp"
+                android:elevation="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/Upgrade3"
+                app:layout_constraintStart_toStartOf="@+id/Upgrade3"
+                app:layout_constraintTop_toTopOf="@+id/Upgrade3"
+                app:srcCompat="@drawable/default_krikoin" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Upgrade3"
+                android:layout_width="120dp"
+                android:layout_height="56dp"
+                android:layout_below="@id/UpgradeCost3"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/buttonshape"
+                android:typeface="normal"
+                app:layout_constraintBottom_toBottomOf="@+id/outline3"
+                app:layout_constraintEnd_toEndOf="@+id/outline3"
+                app:layout_constraintTop_toTopOf="@+id/outline3"
+                tools:ignore="TextSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/UpgradeCost3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:elevation="20dp"
+                android:text="..."
+                android:textColor="#FFFF32"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="@+id/Upgrade3"
+                app:layout_constraintStart_toEndOf="@+id/Krikoin3"
+                app:layout_constraintTop_toTopOf="@+id/Upgrade3"
+                tools:ignore="TextSizeCheck" />
+
+
+            <ImageView
+                android:id="@+id/outline3"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/outline3"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toStartOf="@+id/space1"
+                app:layout_constraintStart_toEndOf="@+id/space2"
+                app:layout_constraintTop_toBottomOf="@+id/outline2" />
+
+            <ImageView
+                android:id="@+id/icon3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/upgrade_three"
+                app:layout_constraintBottom_toBottomOf="@+id/outline3"
+                app:layout_constraintStart_toStartOf="@+id/outline3"
+                app:layout_constraintTop_toTopOf="@+id/outline3" />
+
+            <TextView
+                android:id="@+id/amountUpgrades3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="...x"
+                android:textColor="@color/gainsboro"
+                android:textSize="17.5dp"
+                app:layout_constraintEnd_toStartOf="@+id/Upgrade3"
+                app:layout_constraintStart_toEndOf="@+id/icon3"
+                app:layout_constraintTop_toTopOf="@+id/outline3"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/description3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="+... В секунду"
+                android:textColor="@color/gainsboro"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toBottomOf="@+id/outline3"
+                app:layout_constraintEnd_toStartOf="@+id/Upgrade3"
+                app:layout_constraintStart_toEndOf="@+id/icon3"
+                tools:ignore="TextSizeCheck" />
+
+            <ImageView
+                android:id="@+id/Krikoin4"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="6dp"
+                android:elevation="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/Upgrade4"
+                app:layout_constraintStart_toStartOf="@+id/Upgrade4"
+                app:layout_constraintTop_toTopOf="@+id/Upgrade4"
+                app:srcCompat="@drawable/default_krikoin" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Upgrade4"
+                android:layout_width="120dp"
+                android:layout_height="56dp"
+                android:layout_below="@id/UpgradeCost4"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/buttonshape"
+                android:typeface="normal"
+                app:layout_constraintBottom_toBottomOf="@+id/outline4"
+                app:layout_constraintEnd_toEndOf="@+id/outline4"
+                app:layout_constraintTop_toTopOf="@+id/outline4"
+                tools:ignore="TextSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/UpgradeCost4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:elevation="20dp"
+                android:text="..."
+                android:textColor="#FFFF32"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="@+id/Upgrade4"
+                app:layout_constraintStart_toEndOf="@+id/Krikoin4"
+                app:layout_constraintTop_toTopOf="@+id/Upgrade4"
+                tools:ignore="TextSizeCheck" />
+
+            <ImageView
+                android:id="@+id/outline4"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/outline4"
+                app:layout_constraintEnd_toStartOf="@+id/space1"
+                app:layout_constraintStart_toEndOf="@+id/space2"
+                app:layout_constraintTop_toBottomOf="@+id/outline3" />
+
+            <ImageView
+                android:id="@+id/icon4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/upgrade_fourth"
+                app:layout_constraintBottom_toBottomOf="@+id/outline4"
+                app:layout_constraintStart_toStartOf="@+id/outline4"
+                app:layout_constraintTop_toTopOf="@+id/outline4" />
+
+            <TextView
+                android:id="@+id/amountUpgrades4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="...x"
+                android:textColor="@color/gainsboro"
+                android:textSize="17.5dp"
+                app:layout_constraintEnd_toStartOf="@+id/Upgrade4"
+                app:layout_constraintStart_toEndOf="@+id/icon4"
+                app:layout_constraintTop_toTopOf="@+id/outline4"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/description4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="+... В секунду"
+                android:textColor="@color/gainsboro"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toBottomOf="@+id/outline4"
+                app:layout_constraintEnd_toStartOf="@+id/Upgrade4"
+                app:layout_constraintStart_toEndOf="@+id/icon4"
+                tools:ignore="TextSizeCheck" />
+
+            <ImageView
+                android:id="@+id/Krikoin5"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="6dp"
+                android:elevation="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/Upgrade5"
+                app:layout_constraintStart_toStartOf="@+id/Upgrade5"
+                app:layout_constraintTop_toTopOf="@+id/Upgrade5"
+                app:srcCompat="@drawable/default_krikoin" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Upgrade5"
+                android:layout_width="120dp"
+                android:layout_height="56dp"
+                android:layout_below="@id/UpgradeCost5"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/buttonshape"
+                android:typeface="normal"
+                app:layout_constraintBottom_toBottomOf="@+id/outline5"
+                app:layout_constraintEnd_toEndOf="@+id/outline5"
+                app:layout_constraintTop_toTopOf="@+id/outline5"
+                tools:ignore="TextSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/UpgradeCost5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:elevation="20dp"
+                android:text="..."
+                android:textColor="#FFFF32"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="@+id/Upgrade5"
+                app:layout_constraintStart_toEndOf="@+id/Krikoin5"
+                app:layout_constraintTop_toTopOf="@+id/Upgrade5"
+                tools:ignore="TextSizeCheck" />
+
+
+            <ImageView
+                android:id="@+id/outline5"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/outline5"
+                app:layout_constraintEnd_toStartOf="@+id/space1"
+                app:layout_constraintStart_toEndOf="@+id/space2"
+                app:layout_constraintTop_toBottomOf="@+id/outline4" />
+
+            <ImageView
+                android:id="@+id/icon5"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/upgrade_fifth"
+                app:layout_constraintBottom_toBottomOf="@+id/outline5"
+                app:layout_constraintStart_toStartOf="@+id/outline5"
+                app:layout_constraintTop_toTopOf="@+id/outline5" />
+
+            <TextView
+                android:id="@+id/amountUpgrades5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="...x"
+                android:textColor="@color/gainsboro"
+                android:textSize="17.5dp"
+                app:layout_constraintEnd_toStartOf="@+id/Upgrade5"
+                app:layout_constraintStart_toEndOf="@+id/icon5"
+                app:layout_constraintTop_toTopOf="@+id/outline5"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/description5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="+... В секунду"
+                android:textColor="@color/gainsboro"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toBottomOf="@+id/outline5"
+                app:layout_constraintEnd_toStartOf="@+id/Upgrade5"
+                app:layout_constraintStart_toEndOf="@+id/icon5"
+                tools:ignore="TextSizeCheck" />
+
+
+            <ImageView
+                android:id="@+id/Krikoin6"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="6dp"
+                android:elevation="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/Upgrade6"
+                app:layout_constraintStart_toStartOf="@+id/Upgrade6"
+                app:layout_constraintTop_toTopOf="@+id/Upgrade6"
+                app:srcCompat="@drawable/default_krikoin" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Upgrade6"
+                android:layout_width="120dp"
+                android:layout_height="56dp"
+                android:layout_below="@id/UpgradeCost6"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/buttonshape"
+                android:typeface="normal"
+                app:layout_constraintBottom_toBottomOf="@+id/outline6"
+                app:layout_constraintEnd_toEndOf="@+id/outline6"
+                app:layout_constraintTop_toTopOf="@+id/outline6"
+                tools:ignore="TextSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/UpgradeCost6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:elevation="20dp"
+                android:text="..."
+                android:textColor="#FFFF32"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="@+id/Upgrade6"
+                app:layout_constraintStart_toEndOf="@+id/Krikoin6"
+                app:layout_constraintTop_toTopOf="@+id/Upgrade6"
+                tools:ignore="TextSizeCheck" />
+
+            <ImageView
+                android:id="@+id/outline6"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/outline6"
+                app:layout_constraintEnd_toStartOf="@+id/space1"
+                app:layout_constraintStart_toEndOf="@+id/space2"
+                app:layout_constraintTop_toBottomOf="@+id/outline5" />
+
+            <ImageView
+                android:id="@+id/icon6"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/upgrade_sixth"
+                app:layout_constraintBottom_toBottomOf="@+id/outline6"
+                app:layout_constraintStart_toStartOf="@+id/outline6"
+                app:layout_constraintTop_toTopOf="@+id/outline6" />
+
+            <TextView
+                android:id="@+id/amountUpgrades6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="...x"
+                android:textColor="@color/gainsboro"
+                android:textSize="17.5dp"
+                app:layout_constraintEnd_toStartOf="@+id/Upgrade6"
+                app:layout_constraintStart_toEndOf="@+id/icon6"
+                app:layout_constraintTop_toTopOf="@+id/outline6"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/description6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="+... В секунду"
+                android:textColor="@color/gainsboro"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toBottomOf="@+id/outline6"
+                app:layout_constraintEnd_toStartOf="@+id/Upgrade6"
+                app:layout_constraintStart_toEndOf="@+id/icon6"
+                tools:ignore="TextSizeCheck" />
+
+            <ImageView
+                android:id="@+id/Krikoin7"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="6dp"
+                android:elevation="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/Upgrade7"
+                app:layout_constraintStart_toStartOf="@+id/Upgrade7"
+                app:layout_constraintTop_toTopOf="@+id/Upgrade7"
+                app:srcCompat="@drawable/default_krikoin" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Upgrade7"
+                android:layout_width="120dp"
+                android:layout_height="56dp"
+                android:layout_below="@id/UpgradeCost7"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/buttonshape"
+                android:typeface="normal"
+                app:layout_constraintBottom_toBottomOf="@+id/outline7"
+                app:layout_constraintEnd_toEndOf="@+id/outline7"
+                app:layout_constraintTop_toTopOf="@+id/outline7"
+                tools:ignore="TextSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/UpgradeCost7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:elevation="20dp"
+                android:text="..."
+                android:textColor="#FFFF32"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="@+id/Upgrade7"
+                app:layout_constraintStart_toEndOf="@+id/Krikoin7"
+                app:layout_constraintTop_toTopOf="@+id/Upgrade7"
+                tools:ignore="TextSizeCheck,TextSizeCheck" />
+
+
+            <ImageView
+                android:id="@+id/outline7"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/outline7"
+                app:layout_constraintEnd_toStartOf="@+id/space1"
+                app:layout_constraintStart_toEndOf="@+id/space2"
+                app:layout_constraintTop_toBottomOf="@+id/outline6" />
+
+            <ImageView
+                android:id="@+id/icon7"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/upgrade_seventh"
+                app:layout_constraintBottom_toBottomOf="@+id/outline7"
+                app:layout_constraintStart_toStartOf="@+id/outline7"
+                app:layout_constraintTop_toTopOf="@+id/outline7" />
+
+            <TextView
+                android:id="@+id/amountUpgrades7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="...x"
+                android:textColor="@color/gainsboro"
+                android:textSize="17.5dp"
+                app:layout_constraintEnd_toStartOf="@+id/Upgrade7"
+                app:layout_constraintStart_toEndOf="@+id/icon7"
+                app:layout_constraintTop_toTopOf="@+id/outline7"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/description7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="+... В секунду"
+                android:textColor="@color/gainsboro"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toBottomOf="@+id/outline7"
+                app:layout_constraintEnd_toStartOf="@+id/Upgrade7"
+                app:layout_constraintStart_toEndOf="@+id/icon7"
+                tools:ignore="TextSizeCheck" />
+
+            <ImageView
+                android:id="@+id/Krikoin8"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="6dp"
+                android:elevation="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/Upgrade8"
+                app:layout_constraintStart_toStartOf="@+id/Upgrade7"
+                app:layout_constraintTop_toTopOf="@+id/Upgrade8"
+                app:srcCompat="@drawable/default_krikoin" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Upgrade8"
+                android:layout_width="120dp"
+                android:layout_height="56dp"
+                android:layout_below="@id/UpgradeCost8"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/buttonshape"
+                android:typeface="normal"
+                app:layout_constraintBottom_toBottomOf="@+id/outline8"
+                app:layout_constraintEnd_toEndOf="@+id/outline8"
+                app:layout_constraintTop_toTopOf="@+id/outline8"
+                tools:ignore="TextSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/UpgradeCost8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:elevation="20dp"
+                android:text="..."
+                android:textColor="#FFFF32"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="@+id/Upgrade8"
+                app:layout_constraintStart_toEndOf="@+id/Krikoin8"
+                app:layout_constraintTop_toTopOf="@+id/Upgrade8"
+                tools:ignore="TextSizeCheck" />
+
+            <ImageView
+                android:id="@+id/outline8"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/outline8"
+                app:layout_constraintEnd_toStartOf="@+id/space1"
+                app:layout_constraintStart_toEndOf="@+id/space2"
+                app:layout_constraintTop_toBottomOf="@+id/outline7" />
+
+            <ImageView
+                android:id="@+id/icon8"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/upgrade_eigth"
+                app:layout_constraintBottom_toBottomOf="@+id/outline8"
+                app:layout_constraintStart_toStartOf="@+id/outline8"
+                app:layout_constraintTop_toTopOf="@+id/outline8" />
+
+            <TextView
+                android:id="@+id/amountUpgrades8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="...x"
+                android:textColor="@color/gainsboro"
+                android:textSize="17.5dp"
+                app:layout_constraintEnd_toStartOf="@+id/Upgrade8"
+                app:layout_constraintStart_toEndOf="@+id/icon8"
+                app:layout_constraintTop_toTopOf="@+id/outline8"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/description8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="+... В секунду"
+                android:textColor="@color/gainsboro"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toBottomOf="@+id/outline8"
+                app:layout_constraintEnd_toStartOf="@+id/Upgrade8"
+                app:layout_constraintStart_toEndOf="@+id/icon8"
+                tools:ignore="TextSizeCheck" />
+
+            <ImageView
+                android:id="@+id/Krikoin9"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="6dp"
+                android:elevation="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/Upgrade9"
+                app:layout_constraintStart_toStartOf="@+id/Upgrade9"
+                app:layout_constraintTop_toTopOf="@+id/Upgrade9"
+                app:srcCompat="@drawable/default_krikoin" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Upgrade9"
+                android:layout_width="120dp"
+                android:layout_height="56dp"
+                android:layout_below="@id/UpgradeCost9"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/buttonshape"
+                android:typeface="normal"
+                app:layout_constraintBottom_toBottomOf="@+id/outline9"
+                app:layout_constraintEnd_toEndOf="@+id/outline9"
+                app:layout_constraintTop_toTopOf="@+id/outline9"
+                tools:ignore="TextSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/UpgradeCost9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:elevation="20dp"
+                android:text="..."
+                android:textColor="#FFFF32"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="@+id/Upgrade9"
+                app:layout_constraintStart_toEndOf="@+id/Krikoin9"
+                app:layout_constraintTop_toTopOf="@+id/Upgrade9"
+                tools:ignore="TextSizeCheck" />
+
+            <ImageView
+                android:id="@+id/outline9"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/outlineid9"
+                app:layout_constraintEnd_toStartOf="@+id/space1"
+                app:layout_constraintStart_toEndOf="@+id/space2"
+                app:layout_constraintTop_toBottomOf="@+id/outline8" />
+
+            <ImageView
+                android:id="@+id/icon9"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/upgrade_ninth"
+                app:layout_constraintBottom_toBottomOf="@+id/outline9"
+                app:layout_constraintStart_toStartOf="@+id/outline9"
+                app:layout_constraintTop_toTopOf="@+id/outline9" />
+
+            <TextView
+                android:id="@+id/amountUpgrades9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="...x"
+                android:textColor="@color/gainsboro"
+                android:textSize="17.5dp"
+                app:layout_constraintEnd_toStartOf="@+id/Upgrade9"
+                app:layout_constraintStart_toEndOf="@+id/icon9"
+                app:layout_constraintTop_toTopOf="@+id/outline9"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/description9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="+... В секунду"
+                android:textColor="@color/gainsboro"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toBottomOf="@+id/outline9"
+                app:layout_constraintEnd_toStartOf="@+id/Upgrade9"
+                app:layout_constraintStart_toEndOf="@+id/icon9"
+                tools:ignore="TextSizeCheck" />
+
+
+            <Space
+                android:id="@+id/space"
+                android:layout_marginTop="156dp"
+                app:layout_constraintTop_toBottomOf="@+id/outline9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="1dp"
+                android:layout_height="1dp"/>
+            <Space
+                android:id="@+id/space1"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="36dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <Space
+                android:id="@+id/space2"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="36dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>

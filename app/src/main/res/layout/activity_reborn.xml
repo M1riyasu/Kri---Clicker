@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rebornbackground">
+    <TextView
+        android:id="@+id/CurrentSpaceCoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="..."
+        android:textSize="20sp"
+        android:textColor="@color/gainsboro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/SpaceCoin"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/cosmic_krikoin"
+        app:layout_constraintBottom_toBottomOf="@+id/CurrentSpaceCoin"
+        app:layout_constraintStart_toEndOf="@+id/CurrentSpaceCoin"
+        app:layout_constraintTop_toTopOf="@+id/CurrentSpaceCoin" />
+
+
+    <ImageButton
+        android:id="@+id/exit"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/exitreborn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/rebornUpgrade1"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/rebornid1"
+        android:src="@drawable/shadowreborn"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+    <ImageView
+        android:id="@+id/line1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="-1dp"
+        android:background="@drawable/line"
+        android:src="@drawable/shadowline"
+        android:scaleType="fitXY"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/rebornUpgrade1"
+        app:layout_constraintStart_toStartOf="@id/rebornUpgrade1"
+        app:layout_constraintEnd_toEndOf="@id/rebornUpgrade2"
+        app:layout_constraintTop_toTopOf="@id/rebornUpgrade2"/>
+
+    <ImageView
+        android:id="@+id/line2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="-1dp"
+        android:background="@drawable/line"
+        android:src="@drawable/shadowline"
+        android:scaleType="fitXY"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/rebornUpgrade1"
+        app:layout_constraintStart_toStartOf="@id/rebornUpgrade1"
+        app:layout_constraintEnd_toEndOf="@id/rebornUpgrade3"
+        app:layout_constraintTop_toTopOf="@id/rebornUpgrade3"/>
+
+    <ImageButton
+        android:id="@+id/rebornUpgrade2"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="-16dp"
+        android:background="@drawable/rebornida1"
+        android:src="@drawable/shadowreborn"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/rebornUpgrade1"
+        app:layout_constraintStart_toEndOf="@+id/rebornUpgrade1"
+        tools:ignore="SpeakableTextPresentCheck" />
+    <ImageButton
+        android:id="@+id/rebornUpgrade3"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="-16dp"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/rebornida2"
+        android:src="@drawable/shadowreborn"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/rebornUpgrade1"
+        app:layout_constraintStart_toEndOf="@+id/rebornUpgrade1"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/line5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="-1dp"
+        android:background="@drawable/line"
+        android:src="@drawable/shadowline"
+        android:scaleType="fitXY"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/rebornUpgrade2"
+        app:layout_constraintStart_toStartOf="@id/rebornUpgrade2"
+        app:layout_constraintEnd_toEndOf="@id/rebornUpgrade4"
+        app:layout_constraintTop_toTopOf="@id/rebornUpgrade4"/>
+
+    <ImageView
+        android:id="@+id/line6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="-1dp"
+        android:background="@drawable/line"
+        android:src="@drawable/shadowline"
+        android:scaleType="fitXY"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/rebornUpgrade3"
+        app:layout_constraintStart_toStartOf="@id/rebornUpgrade3"
+        app:layout_constraintEnd_toEndOf="@id/rebornUpgrade5"
+        app:layout_constraintTop_toTopOf="@id/rebornUpgrade5"/>
+
+
+    <ImageButton
+        android:id="@+id/rebornUpgrade4"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="0dp"
+        android:background="@drawable/rebornida3"
+        android:src="@drawable/shadowreborn"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/rebornUpgrade2"
+        app:layout_constraintStart_toEndOf="@+id/rebornUpgrade2"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/rebornUpgrade5"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/rebornida4"
+        android:src="@drawable/shadowreborn"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/rebornUpgrade3"
+        app:layout_constraintStart_toEndOf="@+id/rebornUpgrade3"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/line3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="-1dp"
+        android:background="@drawable/line"
+        android:src="@drawable/shadowline"
+        android:scaleType="fitXY"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/rebornUpgrade6"
+        app:layout_constraintStart_toStartOf="@id/rebornUpgrade6"
+        app:layout_constraintEnd_toEndOf="@id/rebornUpgrade1"
+        app:layout_constraintTop_toTopOf="@id/rebornUpgrade1"/>
+
+    <ImageView
+        android:id="@+id/line4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="-1dp"
+        android:background="@drawable/line"
+        android:src="@drawable/shadowline"
+        android:scaleType="fitXY"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/rebornUpgrade7"
+        app:layout_constraintStart_toStartOf="@id/rebornUpgrade7"
+        app:layout_constraintEnd_toEndOf="@id/rebornUpgrade1"
+        app:layout_constraintTop_toTopOf="@id/rebornUpgrade1"/>
+
+    <ImageButton
+        android:id="@+id/rebornUpgrade6"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="-16dp"
+        android:background="@drawable/rebornidb1"
+        android:src="@drawable/shadowreborn"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/rebornUpgrade1"
+        app:layout_constraintTop_toBottomOf="@+id/rebornUpgrade1"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/rebornUpgrade7"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="-16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/rebornidb2"
+        android:src="@drawable/shadowreborn"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/rebornUpgrade1"
+        app:layout_constraintTop_toBottomOf="@+id/rebornUpgrade1"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/line7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="-1dp"
+        android:background="@drawable/line"
+        android:src="@drawable/shadowline"
+        android:scaleType="fitXY"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/rebornUpgrade8"
+        app:layout_constraintStart_toStartOf="@id/rebornUpgrade8"
+        app:layout_constraintEnd_toEndOf="@id/rebornUpgrade6"
+        app:layout_constraintTop_toTopOf="@id/rebornUpgrade6"/>
+
+    <ImageView
+        android:id="@+id/line8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="-1dp"
+        android:background="@drawable/line"
+        android:src="@drawable/shadowline"
+        android:scaleType="fitXY"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/rebornUpgrade9"
+        app:layout_constraintStart_toStartOf="@id/rebornUpgrade9"
+        app:layout_constraintEnd_toEndOf="@id/rebornUpgrade7"
+        app:layout_constraintTop_toTopOf="@id/rebornUpgrade7"/>
+
+
+    <ImageButton
+        android:id="@+id/rebornUpgrade8"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="-8dp"
+        android:background="@drawable/rebornidb3"
+        android:src="@drawable/shadowreborn"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/rebornUpgrade6"
+        app:layout_constraintTop_toBottomOf="@+id/rebornUpgrade6"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/rebornUpgrade9"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="-8dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/rebornidb4"
+        android:src="@drawable/shadowreborn"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/rebornUpgrade7"
+        app:layout_constraintTop_toBottomOf="@+id/rebornUpgrade7"
+        tools:ignore="SpeakableTextPresentCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>

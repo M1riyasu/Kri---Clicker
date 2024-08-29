@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/transparent"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/upgradesActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        tools:context=".ui.Upgrades.UpgradesFragment">
+
+
+    <TextView
+        android:id="@+id/CurrentKrikoinUpgrades"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="..."
+        android:textSize="20sp"
+        android:textColor="@color/gainsboro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/UpgradesKriKoin"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/default_krikoin"
+        app:layout_constraintBottom_toBottomOf="@+id/CurrentKrikoinUpgrades"
+        app:layout_constraintStart_toEndOf="@+id/CurrentKrikoinUpgrades"
+        app:layout_constraintTop_toTopOf="@+id/CurrentKrikoinUpgrades" />
+
+        <TextView
+            android:id="@+id/KrikoinPerSecondUpgrades"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="..."
+            android:textColor="@color/gainsboro"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="@+id/CurrentKrikoinUpgrades"
+            app:layout_constraintStart_toStartOf="@+id/CurrentKrikoinUpgrades"
+            app:layout_constraintTop_toBottomOf="@+id/CurrentKrikoinUpgrades"
+            tools:ignore="TextSizeCheck" />
+
+        <ImageView
+            android:id="@+id/UpgradesKrikoinPerSecond"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:src="@drawable/default_krikoin"
+            app:layout_constraintBottom_toBottomOf="@+id/KrikoinPerSecondUpgrades"
+            app:layout_constraintStart_toEndOf="@+id/KrikoinPerSecondUpgrades"
+            app:layout_constraintTop_toTopOf="@+id/KrikoinPerSecondUpgrades" />
+
+
+<!--        <HorizontalScrollView-->
+<!--        android:id="@+id/horizontalScrollView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="64dp"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/CurrentKrikoinUpgrades"-->
+<!--        tools:ignore="InvalidId,SpeakableTextPresentCheck"-->
+<!--        tools:layout_editor_absoluteX="1dp">-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/clickerScroll"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="horizontal">-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </HorizontalScrollView>-->
+
+<!--        <HorizontalScrollView-->
+<!--            android:id="@+id/horizontalScrollView3"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="64dp"-->
+<!--            android:layout_marginBottom="80dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            tools:ignore="InvalidId,SpeakableTextPresentCheck"-->
+<!--            tools:layout_editor_absoluteX="1dp">-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/purchasedScroll"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="horizontal">-->
+<!--            </LinearLayout>-->
+<!--        </HorizontalScrollView>-->
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/purchasedGrid"
+            android:layout_width="576dp"
+            android:layout_height="576dp"
+            android:layout_marginTop="86dp"
+            app:rowCount="9"
+            app:columnCount="9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/purchaseableGrid">
+
+        </androidx.gridlayout.widget.GridLayout>
+        <Space
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/purchasedGrid"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="1dp"
+            android:layout_height="1dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/purchaseAllButton"
+            android:layout_width="96dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/popup_change"
+            android:text="@string/purchaseAll"
+            android:textColor="@color/darkYellow"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/purchaseableGrid"
+            app:layout_constraintBottom_toBottomOf="@+id/purchaseableGrid"
+            tools:ignore="TextSizeCheck" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/purchaseableGrid"
+            android:layout_width="640dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="11dp"
+            app:columnCount="10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/purchaseAllButton"
+            app:layout_constraintTop_toBottomOf="@+id/UpgradesKrikoinPerSecond">
+
+        </androidx.gridlayout.widget.GridLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
